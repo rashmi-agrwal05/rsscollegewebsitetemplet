@@ -1,0 +1,347 @@
+/* =========================================================
+   Dr. Raj Shekhar Shrivastava Para Medical College
+   Clean & Stable Rebuild (SAFE VERSION)
+========================================================= */
+
+/* =========================
+   01. ROOT VARIABLES
+========================= */
+:root {
+  --primary-blue: #0b3c5d;
+  --secondary-green: #1b7f6b;
+  --accent-red: #b11226;
+  --light-bg: #f5f7f9;
+  --dark-text: #1f272b;
+  --muted-text: #6b7280;
+  --white: #ffffff;
+}
+
+/* =========================
+   02. RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  background: var(--white);
+  color: var(--dark-text);
+  scroll-behavior: smooth;
+}
+
+/* Offset for fixed header */
+body {
+  padding-top: 80px;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--muted-text);
+}
+
+/* =========================
+   03. GLOBAL UTILITIES
+========================= */
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary-blue);
+}
+
+.section-heading p {
+  max-width: 750px;
+  margin: 10px auto 0;
+}
+
+/* Buttons */
+.main-button-red a,
+button.button {
+  background: var(--accent-red);
+  color: var(--white);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+}
+
+.main-button-red a:hover,
+button.button:hover {
+  background: var(--secondary-green);
+}
+
+/* =========================
+   04. HEADER
+========================= */
+.header-area {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: linear-gradient(90deg, #5a89c8, #124e78, #1b5780);
+
+}
+
+.header-area .main-nav {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-area .logo img {
+  height: 52px;
+}
+
+.header-area .nav {
+  display: flex;
+}
+
+.header-area .nav li {
+  margin-left: 25px;
+}
+
+.header-area .nav li a {
+  color: var(--white);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.header-area .nav li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-red);
+  transition: width 0.3s ease;
+}
+
+.header-area .nav li a:hover::after,
+.header-area .nav li a.active::after {
+  width: 100%;
+}
+
+.menu-trigger {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+
+/* =========================
+   05. HERO
+========================= */
+.main-banner {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bg-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(129, 24, 24, 0.121);
+  /* background: rgba(48, 103, 139, 0.322); */
+}
+
+.main-banner .caption {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--white);
+}
+
+.main-banner h6 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.main-banner h2 {
+  font-size: 42px;
+  margin: 20px 0;
+}
+
+/* =========================
+   06. SERVICES
+========================= */
+.services {
+  margin-top: -120px;
+  position: relative;
+}
+
+.services .item {
+  background: var(--accent-red);
+  border-radius: 18px;
+  padding: 35px;
+  text-align: center;
+  color: var(--white);
+  min-height: 280px;
+}
+
+/* =========================
+   07. ADMISSION SECTION
+========================= */
+.upcoming-meetings {
+  background: var(--light-bg);
+  padding: 120px 0;
+}
+
+.categories {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+}
+
+/* PRINCIPAL CARD */
+.principal-card {
+  display: flex;
+  gap: 20px;
+  background: var(--white);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.principal-card img {
+  width: 120px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ADMISSION INFO CARDS */
+.admission-card {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.admission-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   08. VERTICAL IMAGE SLIDER
+========================= */
+.vertical-slider {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.18);
+}
+
+.vertical-slider .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.vertical-slider .slide.active {
+  opacity: 1;
+}
+
+/* =========================
+   09. GALLERY (SAFE FIX)
+========================= */
+#gallery .row {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 20px;
+}
+
+#gallery .col-lg-3 {
+  flex: 0 0 260px;
+}
+
+#gallery img {
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+#gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   10. CONTACT
+========================= */
+.contact-us {
+  background: var(--light-bg);
+  padding: 120px 0;
+}
+
+.right-info {
+  background: var(--primary-blue);
+  border-radius: 16px;
+  padding: 30px;
+  color: var(--white);
+}
+
+/* =========================
+   11. FOOTER
+========================= */
+.footer-area {
+  background: #0a2a3a;
+  color: #ddd;
+  padding-top: 60px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* =========================
+   12. RESPONSIVE
+========================= */
+@media (max-width: 991px) {
+  .menu-trigger {
+    display: block;
+  }
+  .nav {
+    display: none;
+    flex-direction: column;
+  }
+}
